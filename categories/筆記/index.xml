@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>這裡是巫宗霖的個人網站</title>
-    <link>https://jason11254.github.io/</link>
-    <description>Recent content on 這裡是巫宗霖的個人網站</description>
+    <title>筆記 on 這裡是巫宗霖的個人網站</title>
+    <link>https://jason11254.github.io/categories/%E7%AD%86%E8%A8%98/</link>
+    <description>Recent content in 筆記 on 這裡是巫宗霖的個人網站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 15 Feb 2022 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Feb 2022 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/categories/%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring學習筆記01-IoC簡介</title>
       <link>https://jason11254.github.io/blog/springioc/</link>
