@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on 這裡是巫宗霖的個人網站</title>
-    <link>https://jason11254.github.io/blog/</link>
-    <description>Recent content in blog on 這裡是巫宗霖的個人網站</description>
+    <title>AOP on 這裡是巫宗霖的個人網站</title>
+    <link>https://jason11254.github.io/tags/aop/</link>
+    <description>Recent content in AOP on 這裡是巫宗霖的個人網站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://jason11254.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spring學習筆記01-IoC簡介</title>
-      <link>https://jason11254.github.io/blog/springioc/</link>
-      <pubDate>Tue, 15 Feb 2022 10:07:47 +0800</pubDate>
-      
-      <guid>https://jason11254.github.io/blog/springioc/</guid>
-      <description>IoC (Inversion of Control) - 控制反轉，將object的控制權交給Spring容器管理。
-由Spring容器管理的object則稱為bean。
-Spring IoC簡易流程   在目標class上加上@Component：</description>
-    </item>
-    
+    <lastBuildDate>Tue, 15 Feb 2022 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/tags/aop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring學習筆記02-AOP簡介</title>
       <link>https://jason11254.github.io/blog/springaop/</link>

@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jason11254.github.io/tags/aop/</loc>
+    <lastmod>2022-02-15T10:07:47+08:00</lastmod>
+  </url><url>
     <loc>https://jason11254.github.io/categories/</loc>
+    <lastmod>2022-02-15T10:07:47+08:00</lastmod>
+  </url><url>
+    <loc>https://jason11254.github.io/tags/ioc/</loc>
     <lastmod>2022-02-15T10:07:47+08:00</lastmod>
   </url><url>
     <loc>https://jason11254.github.io/tags/java/</loc>
@@ -12,6 +18,9 @@
     <lastmod>2022-02-15T10:07:47+08:00</lastmod>
   </url><url>
     <loc>https://jason11254.github.io/blog/springioc/</loc>
+    <lastmod>2022-02-15T10:07:47+08:00</lastmod>
+  </url><url>
+    <loc>https://jason11254.github.io/blog/springaop/</loc>
     <lastmod>2022-02-15T10:07:47+08:00</lastmod>
   </url><url>
     <loc>https://jason11254.github.io/tags/</loc>

@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="這篇文章為spring-ioc的筆記">
+  <meta name="description" content="這篇文章為spring-aop的筆記">
   <meta name="author" content="巫宗霖">
   <meta name="generator" content="Hugo 0.93.3" />
 
@@ -134,7 +134,7 @@
         <a href="/categories/%e7%ad%86%e8%a8%98"
           class="text-primary">筆記</a>
         
-        <h2>Spring學習筆記01-IoC簡介</h2>
+        <h2>Spring學習筆記02-AOP簡介</h2>
         <div class="mb-3 post-meta">
           <span>By 巫宗霖</span>
           
@@ -144,54 +144,79 @@
         </div>
         
         <div class="content mb-5">
-          <p><strong>IoC (Inversion of Control) - 控制反轉，將object的控制權交給Spring容器管理。</strong></p>
-<p><strong>由Spring容器管理的object則稱為bean。</strong></p>
-<h4 id="spring-ioc簡易流程">Spring IoC簡易流程</h4>
-<ol>
-<li>
-<p>在目標class上加上@Component：</p>
-<p>@Component只能加在class上，使用後即可將該class變為Spring容器管理的bean。</p>
-</li>
-</ol>
-<pre tabindex="0"><code>@Component
-public class Apple {
-    public void print(String message){
-        System.out.println(&#34;這顆蘋果，&#34;+message);
+          <p><strong>AOP (Aspect Oriented Programming) 切面導向程式設計，意思是將很多方法使用的共同邏輯寫在切面裡，由切面統一處理這段程式。</strong></p>
+<p>這裡假設沒有使用切面，每次執行方法時都必須在方法程式開始時輸出【開始】與方法程式結束時【結束】，那麼程式碼會長這樣：</p>
+<pre tabindex="0"><code>public class ExampleClass{
+    public void fun01(){
+        System.out.println(&#34;開始&#34;);
+        ...
+        一些方法程式
+        ...
+        System.out.println(&#34;結束&#34;);
     }
+} 
+</code></pre><p>如範例所見，必須在進入方法時與方法結束時加入print語法來輸出文字。只有一個方法時還很輕鬆，但當有10個方法時，這段程式就必須重複寫10次。</p>
+<p>而由AOP統一處理時則不需要重複寫這段程式，僅需要設定好切面，由切面去執行輸出【開始】與【結束】的任務。</p>
+<h4 id="切面基礎設定">切面基礎設定</h4>
+<ol>
+<li>在要成為切面的class上加上@Aspect與@Component，兩個標籤順序不重要，但必須兩者都存在。</li>
+</ol>
+<pre tabindex="0"><code>@Aspect
+@Component
+public class MyAspect {
+...
 }
 </code></pre><ol start="2">
-<li>在需要該物件的class上也加上@Component：</li>
-</ol>
-<pre tabindex="0"><code>@Component
-public class Person {
-    ...
-}
-</code></pre><ol start="3">
 <li>
-<p>最後使用@Autowired將bean注入物件，完成DI (Dependency Inject) - 依賴注入。</p>
-<p>@Autowired只能加在物件上，用於取得Spring容器中的bean。</p>
-<p>範例中取得了Spring容器中Apple的bean，注入物件apple。</p>
+<p>使用@Before與@After標籤，即可設定在方法前後需要執行的程式。</p>
+<p>切入點設定範例：@Before (&ldquo;execution(* 路徑.目標Class.*(..))&quot;)，</p>
+<p>上面的設定會讓<em><strong>目標Class</strong></em>中所有方法執行前都先執行Before內的程式，After設定寫法相同。</p>
 </li>
 </ol>
-<pre tabindex="0"><code>@Component
-public class Person {
-    @Autowired
-    private Apple apple;
-    
-    public void myApple(){
-        apple.print(&#34;是我的。&#34;);
+<pre tabindex="0"><code>@Aspect
+@Component
+public class MyAspect {
+    @Before(&#34;execution(* com.example.springbootproject.ExampleClass.*(..))&#34;)
+    public void before(){
+        System.out.println(&#34;開始&#34;);
+    }
+    @After(&#34;execution(* com.example.springbootproject.ExampleClass.*(..))&#34;)
+    public void after(){
+        System.out.println(&#34;結束&#34;);
     }
 }
-</code></pre><ol start="4">
-<li>
-<p>創建main運行myApple()方法後即可看到console上的運行結果：這顆蘋果，是我的。</p>
-<p>而使用Spring容器建立的bean注入至物件中即是IoC的流程。</p>
-</li>
+</code></pre><ol start="3">
+<li>拿掉原本在目標Class內寫的print方法，範例為ExampleClass。</li>
 </ol>
-<h4 id="spring-ioc-優點">Spring IoC 優點：</h4>
+<pre tabindex="0"><code>public class ExampleClass{
+    public void fun01(){
+    	...
+        一些方法程式
+        ...
+    }
+} 
+</code></pre><ol start="4">
+<li>建立main執行fun01()方法即可看到執行前後切面自動輸出【開始】與【結束】。</li>
+<li>可以使用@Around來同時設定before與after，但是設定起來比較麻煩。得到的結果會跟上面@Before跟@After的結果一樣。</li>
+</ol>
+<pre tabindex="0"><code>@Aspect
+@Component
+public class MyAspect {
+	@Around(&#34;execution(* com.example.springbootproject.ExampleClass.*(..))&#34;)
+    public Object around(ProceedingJoinPoint pjp) throws Throwable{
+        System.out.println(&#34;開始&#34;);
+		//中間這行pjp.proceed()就是要執行切入點的方法。這行之上就是before。
+        Object obj = pjp.proceed();
+		//中間這行pjp.proceed()就是要執行切入點的方法。這行之下就是after。
+        System.out.println(&#34;結束&#34;);
+        return obj;
+    }
+}
+</code></pre><h4 id="spring-aop的發展">Spring AOP的發展</h4>
 <ol>
-<li>使程式之間關聯性降低，在修改上可以不用到處尋找其他有關聯到的地方。</li>
-<li>object的生命週期由Spring容器管理，無須工程師手動操作。</li>
+<li>權限認證 e.g. Spring Security</li>
+<li>統一處理Exceptuon e.g. @ControllerAdvice</li>
+<li>Log</li>
 </ol>
 
         </div>

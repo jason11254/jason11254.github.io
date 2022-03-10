@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="這篇文章為spring-ioc的筆記">
+  <meta name="description" content="This is meta description">
   <meta name="author" content="巫宗霖">
   <meta name="generator" content="Hugo 0.93.3" />
 
@@ -126,101 +126,105 @@
 </header>
 <!-- /navigation -->
 
+
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto">
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="row">
+          
+          
+          <div class="col-md-6 mb-4">
+    <article class="card">
+        
+        <div class="card-body px-0">
         
         <a href="/categories/%e7%ad%86%e8%a8%98"
-          class="text-primary">筆記</a>
+            class="text-primary">筆記</a>
         
-        <h2>Spring學習筆記01-IoC簡介</h2>
+        <a href="https://jason11254.github.io/blog/springioc/" class="h5 d-block my-3">Spring學習筆記01-IoC簡介</a>
         <div class="mb-3 post-meta">
-          <span>By 巫宗霖</span>
-          
-          <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>2022-02-15</span>
+            <span>By 巫宗霖</span>
+            
+            <span class="border-bottom border-primary px-2 mx-1"></span>
+            <span>2022-02-15</span>
+            
+        </div>
+        <p class="card-text">這篇文章為spring-ioc的筆記</p>
+        <a href="https://jason11254.github.io/blog/springioc/" class="btn btn-outline-primary">read more</a>
+        </div>
+    </article>
+</div>
           
         </div>
+      </div>
+      
+      <div class="col-lg-4">
+  <div class="widgets">
+    
+    <div class="widget">
+      
+      <h4 class="widget-title">About Me</h4>
+      
+      <img src="https://jason11254.github.io/images/me.jpg" alt=""
+        class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
+      
+      <p>我是巫宗霖，畢業於資訊工程科系。
+個性隨和，雙子座。
+目標是將所學應用到不同專案上，並持續吸收進步。
+這個網站將用作個人的筆記與紀錄。</p>
+      <a href="https://jason11254.github.io/about/" class="btn btn-outline-primary">Know More</a>
+      
+    </div>
+    
+    <div class="widget">
+      <h4 class="widget-title">Category</h4>
+      <ul class="list-unstyled">
+        <li><a
+            href="/categories/%e7%ad%86%e8%a8%98/">筆記</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="widget">
+      <h4 class="widget-title">Tag</h4>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+            href="/tags/aop/">Aop</a></li>
+        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+            href="/tags/ioc/">Ioc</a></li>
+        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+            href="/tags/java/">Java</a></li>
+        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+            href="/tags/spring/">Spring</a></li>
+      </ul>
+    </div>
+    
+    <div class="widget">
+      <h4 class="widget-title">Social</h4>
+      <ul class="list-inline social-links">
         
-        <div class="content mb-5">
-          <p><strong>IoC (Inversion of Control) - 控制反轉，將object的控制權交給Spring容器管理。</strong></p>
-<p><strong>由Spring容器管理的object則稱為bean。</strong></p>
-<h4 id="spring-ioc簡易流程">Spring IoC簡易流程</h4>
-<ol>
-<li>
-<p>在目標class上加上@Component：</p>
-<p>@Component只能加在class上，使用後即可將該class變為Spring容器管理的bean。</p>
-</li>
-</ol>
-<pre tabindex="0"><code>@Component
-public class Apple {
-    public void print(String message){
-        System.out.println(&#34;這顆蘋果，&#34;+message);
-    }
-}
-</code></pre><ol start="2">
-<li>在需要該物件的class上也加上@Component：</li>
-</ol>
-<pre tabindex="0"><code>@Component
-public class Person {
-    ...
-}
-</code></pre><ol start="3">
-<li>
-<p>最後使用@Autowired將bean注入物件，完成DI (Dependency Inject) - 依賴注入。</p>
-<p>@Autowired只能加在物件上，用於取得Spring容器中的bean。</p>
-<p>範例中取得了Spring容器中Apple的bean，注入物件apple。</p>
-</li>
-</ol>
-<pre tabindex="0"><code>@Component
-public class Person {
-    @Autowired
-    private Apple apple;
-    
-    public void myApple(){
-        apple.print(&#34;是我的。&#34;);
-    }
-}
-</code></pre><ol start="4">
-<li>
-<p>創建main運行myApple()方法後即可看到console上的運行結果：這顆蘋果，是我的。</p>
-<p>而使用Spring容器建立的bean注入至物件中即是IoC的流程。</p>
-</li>
-</ol>
-<h4 id="spring-ioc-優點">Spring IoC 優點：</h4>
-<ol>
-<li>使程式之間關聯性降低，在修改上可以不用到處尋找其他有關聯到的地方。</li>
-<li>object的生命週期由Spring容器管理，無須工程師手動操作。</li>
-</ol>
-
-        </div>
-
+        <li class="list-inline-item"><a href="https://www.facebook.com/jason11254/"><i class="ti-facebook"></i></a></li>
         
-        <div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "jason11254" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <li class="list-inline-item"><a href="https://twitter.com/home?lang=zh-Hant"><i class="ti-twitter-alt"></i></a></li>
+        
+        <li class="list-inline-item"><a href="https://github.com/jason11254"><i class="ti-github"></i></a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+      
+
+      
+      <div class="col-12 mt-5">
+        
       </div>
     </div>
   </div>
 </section>
+
 
 
 
