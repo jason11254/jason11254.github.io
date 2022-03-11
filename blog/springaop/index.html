@@ -88,12 +88,6 @@
           
           
           <li class="nav-item">
-            <a class="nav-link" href="https://jason11254.github.io/blog/">文章</a>
-          </li>
-          
-          
-          
-          <li class="nav-item">
             <a class="nav-link" href="https://jason11254.github.io/about/">關於我</a>
           </li>
           
@@ -139,7 +133,7 @@
           <span>By 巫宗霖</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>2022-02-15</span>
+          <span>2021-02-15</span>
           
         </div>
         
@@ -159,7 +153,7 @@
 <p>而由AOP統一處理時則不需要重複寫這段程式，僅需要設定好切面，由切面去執行輸出【開始】與【結束】的任務。</p>
 <h4 id="切面基礎設定">切面基礎設定</h4>
 <ol>
-<li>在要成為切面的class上加上@Aspect與@Component，兩個標籤順序不重要，但必須兩者都存在。</li>
+<li>在要成為切面的class上加上@Aspect與@Component，兩個註解順序不重要，但必須兩者都存在。</li>
 </ol>
 <pre tabindex="0"><code>@Aspect
 @Component
@@ -168,7 +162,7 @@ public class MyAspect {
 }
 </code></pre><ol start="2">
 <li>
-<p>使用@Before與@After標籤，即可設定在方法前後需要執行的程式。</p>
+<p>使用@Before與@After註解，即可設定在方法前後需要執行的程式。</p>
 <p>切入點設定範例：@Before (&ldquo;execution(* 路徑.目標Class.*(..))&quot;)，</p>
 <p>上面的設定會讓<em><strong>目標Class</strong></em>中所有方法執行前都先執行Before內的程式，After設定寫法相同。</p>
 </li>
@@ -289,8 +283,6 @@ public class MyAspect {
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Quick Links</h6>
         <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="https://jason11254.github.io/blog/">文章</a></li>
           
           <li class="mb-3"><a class="text-dark" href="https://jason11254.github.io/about/">關於我</a></li>
           

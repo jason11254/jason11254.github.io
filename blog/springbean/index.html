@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="這篇文章為springBean的筆記">
   <meta name="author" content="巫宗霖">
   <meta name="generator" content="Hugo 0.93.3" />
 
@@ -120,109 +120,153 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <div class="card-body px-0">
+      <div class="col-lg-8 mx-auto">
         
         <a href="/categories/%e7%ad%86%e8%a8%98"
-            class="text-primary">筆記</a>
+          class="text-primary">筆記</a>
         
-        <a href="https://jason11254.github.io/blog/spring%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E6%87%89/" class="h5 d-block my-3">Spring學習筆記03-前後端請求與回應</a>
+        <h2>Spring學習筆記04-Bean</h2>
         <div class="mb-3 post-meta">
-            <span>By 巫宗霖</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021-02-21</span>
-            
-        </div>
-        <p class="card-text">這篇文章為spring請求與回應的筆記</p>
-        <a href="https://jason11254.github.io/blog/spring%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E6%87%89/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span>By 巫宗霖</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021-03-08</span>
           
         </div>
-      </div>
-      
-      <div class="col-lg-4">
-  <div class="widgets">
-    
-    <div class="widget">
-      
-      <h4 class="widget-title">About Me</h4>
-      
-      <img src="https://jason11254.github.io/images/me.jpg" alt=""
-        class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-      
-      <p>我是巫宗霖，畢業於資訊工程科系。
-個性隨和，雙子座。
-目標是將所學應用到不同專案上，並持續吸收進步。
-這個網站將用作個人的筆記與紀錄。</p>
-      <a href="https://jason11254.github.io/about/" class="btn btn-outline-primary">Know More</a>
-      
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Category</h4>
-      <ul class="list-unstyled">
-        <li><a
-            href="/categories/%e7%ad%86%e8%a8%98/">筆記</a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Tag</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/aop/">Aop</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/http/">HTTP</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/ioc/">Ioc</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/java/">Java</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/restful/">Restful</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/spring/">Spring</a></li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Social</h4>
-      <ul class="list-inline social-links">
         
-        <li class="list-inline-item"><a href="https://www.facebook.com/jason11254/"><i class="ti-facebook"></i></a></li>
-        
-        <li class="list-inline-item"><a href="https://twitter.com/home?lang=zh-Hant"><i class="ti-twitter-alt"></i></a></li>
-        
-        <li class="list-inline-item"><a href="https://github.com/jason11254"><i class="ti-github"></i></a></li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
+        <div class="content mb-5">
+          <p>Bean 就是由 Spring容器所管理的 Object。</p>
+<p>Bean 的名稱默認為該Class名稱且第一個字變為小寫。</p>
+<h4 id="創建bean">創建Bean</h4>
+<p>方法1：</p>
+<p>​	在class上加上@Component，使這個class變成Spring容器所管理的Bean。</p>
+<p>​	範例：</p>
+<ol>
+<li>
+<p>建立interface Fruit</p>
+<pre tabindex="0"><code>public interface Fruit{
+	void print(String message);
+}
+</code></pre></li>
+<li>
+<p>建立class Apple 繼承 Fruit，並使用@Component使其成為Spring容器管理的Bean。</p>
+<pre tabindex="0"><code>@Component
+class Apple implements Fruit{
+	@Overwrite
+	public void print(String message){
+		System.out.println(&#34;這顆蘋果，&#34;+message);
+	}
+}
+</code></pre><p>這樣當Spring程式運行時，Spring容器就會自動去生成一個名為apple的Bean。</p>
+</li>
+</ol>
+<p>方法2：</p>
+<ol>
+<li>
+<p>先在class上加上@Configuration，表示這個class是拿來設定Spring的。</p>
+<pre tabindex="0"><code>@Configuration
+class MyConfiguration{
+...
+}
+</code></pre></li>
+<li>
+<p>然後在class設定要Spring容器幫忙建立的Bean，並在該方法上加上@Bean註解。</p>
+<pre tabindex="0"><code>@Configuration
+class MyConfiguration{
+    @Bean
+    public Student createStudent(){
+        return new Student();
+    }
+}
+</code></pre><p>這樣當Spring程式運行時，Spring容器就會自動去生成一個名為student的Bean。</p>
+</li>
+</ol>
+<h4 id="注入bean">注入Bean</h4>
+<p>使用@Autowired 將Spring容器建立的Bean注入至需要使用的地方。</p>
+<p>範例：</p>
+<ol>
+<li>
+<p>創建Class Person 並加上@Component使其成為Spring容器管理的Bean。</p>
+<pre tabindex="0"><code>@Component
+public class Person {}
+</code></pre></li>
+<li>
+<p>建立 Fruit 物件 apple，並使用@Autowired註解，讓Spring容器將對應的Bean注入至apple。</p>
+<pre tabindex="0"><code>@Component
+public class Person {
+	@Autowired
+    private Fruit myFruit;
 
-      
+    public void myFruit(){
+        myFruit.print(&#34;是我的。&#34;);
+    }
+}
+</code></pre><p>由於myFruit物件是Fruit類型，Spring容器注入時會尋找Fruit的Bean或是繼承Fruit的Bean。</p>
+<p>而class Apple有繼承Fruit介面，因此這裡Spring容器會將apple(Bean名字默認為原名稱的小寫)的Bean注入至myFruit。</p>
+<p>執行 myFruit() 可以得到結果print出「這顆蘋果，是我的。」。</p>
+</li>
+</ol>
+<p>另外可以使用@Qualifier來指定需要注入哪一個Bean。</p>
+<p>範例：</p>
+<ol>
+<li>
+<p>再建立一個class Orange也去繼承Fruit。</p>
+<pre tabindex="0"><code>@Component
+class Orange implements Fruit{
+	@Overwrite
+	public void print(String message){
+		System.out.println(&#34;這顆橘子，&#34;+message);
+	}
+}
+</code></pre></li>
+<li>
+<p>此時因為Orange和Apple都是繼承Fruit的Bean，導致原本Person內的myApple在Spring注入時會出錯，因為Spring容器不知道你要注入那一個Bean。</p>
+<p>這時可以加上@Qualifier註解，用來指定要那一個Bean。</p>
+<p>用法：@Qualifier(&ldquo;Bean名稱&rdquo;)  提醒：Bean名稱默認是class名稱第一個字改小寫。因此Apple的Bean為apple，Orange的Bean為orange。</p>
+<pre tabindex="0"><code>@Component
+public class Person {
+	@Autowired
+	@Qualifier(&#34;orange&#34;)
+    private Fruit myFruit;
 
-      
-      <div class="col-12 mt-5">
+    public void myFruit(){
+        myFruit.print(&#34;是我的。&#34;);
+    }
+}
+</code></pre><p>範例中使用@Qualifier(&ldquo;orange&rdquo;)，因此最後 myFruit() 執行結果會是print出「這顆橘子，是我的。」。</p>
+</li>
+</ol>
+
+        </div>
+
         
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jason11254" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
     </div>
   </div>
 </section>
-
 
 
 

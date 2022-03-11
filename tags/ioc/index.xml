@@ -6,11 +6,23 @@
     <description>Recent content in IoC on 這裡是巫宗霖的個人網站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 10 Feb 2022 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/tags/ioc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Mar 2021 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/tags/ioc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring學習筆記04-Bean</title>
+      <link>https://jason11254.github.io/blog/springbean/</link>
+      <pubDate>Mon, 08 Mar 2021 10:07:47 +0800</pubDate>
+      
+      <guid>https://jason11254.github.io/blog/springbean/</guid>
+      <description>Bean 就是由 Spring容器所管理的 Object。
+Bean 的名稱默認為該Class名稱且第一個字變為小寫。
+創建Bean 方法1：
+​	在class上加上@Component，使這個class變成Spring容器所管理的Bean。</description>
+    </item>
+    
     <item>
       <title>Spring學習筆記01-IoC簡介</title>
       <link>https://jason11254.github.io/blog/springioc/</link>
-      <pubDate>Thu, 10 Feb 2022 10:07:47 +0800</pubDate>
+      <pubDate>Wed, 10 Feb 2021 10:07:47 +0800</pubDate>
       
       <guid>https://jason11254.github.io/blog/springioc/</guid>
       <description>IoC (Inversion of Control) - 控制反轉，將object的控制權交給Spring容器管理。
