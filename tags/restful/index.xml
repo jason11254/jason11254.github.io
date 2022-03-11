@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RESTful on 這裡是巫宗霖的個人網站</title>
+    <link>https://jason11254.github.io/tags/restful/</link>
+    <description>Recent content in RESTful on 這裡是巫宗霖的個人網站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 16 Feb 2022 17:47:52 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/tags/restful/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RESTful設計風格</title>
+      <link>https://jason11254.github.io/blog/restful/</link>
+      <pubDate>Wed, 16 Feb 2022 17:47:52 +0800</pubDate>
+      
+      <guid>https://jason11254.github.io/blog/restful/</guid>
+      <description>REST (Representational State Transfer) ful API，是一種設計風格。
+規則如下：
+  使用 http method 表示後端動作。</description>
+    </item>
+    
+  </channel>
+</rss>

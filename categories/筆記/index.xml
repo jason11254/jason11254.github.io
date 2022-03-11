@@ -6,7 +6,18 @@
     <description>Recent content in 筆記 on 這裡是巫宗霖的個人網站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 15 Feb 2022 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/categories/%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Feb 2022 17:47:52 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/categories/%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RESTful設計風格</title>
+      <link>https://jason11254.github.io/blog/restful/</link>
+      <pubDate>Wed, 16 Feb 2022 17:47:52 +0800</pubDate>
+      
+      <guid>https://jason11254.github.io/blog/restful/</guid>
+      <description>REST (Representational State Transfer) ful API，是一種設計風格。
+規則如下：
+  使用 http method 表示後端動作。</description>
+    </item>
+    
     <item>
       <title>Spring學習筆記01-IoC簡介</title>
       <link>https://jason11254.github.io/blog/springioc/</link>
