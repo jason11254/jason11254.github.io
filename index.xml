@@ -6,7 +6,19 @@
     <description>Recent content on 這裡是巫宗霖的個人網站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 16 Feb 2022 17:47:52 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Feb 2022 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring學習筆記03-前後端請求與回應</title>
+      <link>https://jason11254.github.io/blog/spring%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E6%87%89/</link>
+      <pubDate>Mon, 21 Feb 2022 10:07:47 +0800</pubDate>
+      
+      <guid>https://jason11254.github.io/blog/spring%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E6%87%89/</guid>
+      <description>Spring 前後端請求與回應 簡單筆記。
+Http 協議：規定前後端程式之間的資料傳輸格式。
+格式如下：
+   Http Request (請求) Http Response(回應)     http method (get,post,put&amp;hellip;等) http status code (200,404 &amp;hellip; 等)   url (網址) response header   request header response body (後端回傳資料會在這裡)   request body (前端json資料通常放這裡)     HTTP 狀態碼 (http status code) http 狀態碼依照首位數字不同分為五大類。</description>
+    </item>
+    
     <item>
       <title>RESTful設計風格</title>
       <link>https://jason11254.github.io/blog/restful/</link>
@@ -16,17 +28,6 @@
       <description>REST (Representational State Transfer) ful API，是一種設計風格。
 規則如下：
   使用 http method 表示後端動作。</description>
-    </item>
-    
-    <item>
-      <title>Spring學習筆記01-IoC簡介</title>
-      <link>https://jason11254.github.io/blog/springioc/</link>
-      <pubDate>Tue, 15 Feb 2022 10:07:47 +0800</pubDate>
-      
-      <guid>https://jason11254.github.io/blog/springioc/</guid>
-      <description>IoC (Inversion of Control) - 控制反轉，將object的控制權交給Spring容器管理。
-由Spring容器管理的object則稱為bean。
-Spring IoC簡易流程   在目標class上加上@Component：</description>
     </item>
     
     <item>
@@ -41,15 +42,14 @@ public class ExampleClass{public void fun01(){System.</description>
     </item>
     
     <item>
-      <title>Spring學習筆記03-前後端請求與回應</title>
-      <link>https://jason11254.github.io/blog/spring%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E6%87%89/</link>
-      <pubDate>Tue, 15 Feb 2022 10:07:47 +0800</pubDate>
+      <title>Spring學習筆記01-IoC簡介</title>
+      <link>https://jason11254.github.io/blog/springioc/</link>
+      <pubDate>Thu, 10 Feb 2022 10:07:47 +0800</pubDate>
       
-      <guid>https://jason11254.github.io/blog/spring%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E6%87%89/</guid>
-      <description>Spring 前後端請求與回應 簡單筆記。
-Http 協議：規定前後端程式之間的資料傳輸格式。
-格式如下：
-   Http Request (請求) Http Response(回應)     http method (get,post,put&amp;hellip;等) http status code (200,404 &amp;hellip; 等)   url (網址) response header   request header response body   request body     HTTP 狀態碼 (http status code) http 狀態碼依照首位數字不同分為五大類。</description>
+      <guid>https://jason11254.github.io/blog/springioc/</guid>
+      <description>IoC (Inversion of Control) - 控制反轉，將object的控制權交給Spring容器管理。
+由Spring容器管理的object則稱為bean。
+Spring IoC簡易流程   在目標class上加上@Component：</description>
     </item>
     
   </channel>
