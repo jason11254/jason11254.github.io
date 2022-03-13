@@ -8,6 +8,17 @@
     <language>zh-tw</language>
     <lastBuildDate>Mon, 08 Mar 2021 10:07:47 +0800</lastBuildDate><atom:link href="https://jason11254.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>SpringBoot 整合 MyBatis 環境設定</title>
+      <link>https://jason11254.github.io/blog/mybatis/</link>
+      <pubDate>Mon, 08 Mar 2021 10:07:47 +0800</pubDate>
+      
+      <guid>https://jason11254.github.io/blog/mybatis/</guid>
+      <description>MyBatis是一個優秀的持久層框架，它對jdbc的操作資料庫的過程進行封裝，使開發者只需要關注 SQL 本身，而不需要花費精力去處理例如註冊驅動、創建connection、創建statement、手動設置參數、結果集檢索等jdbc繁雜的過程代碼。
+相比Hibernate完全ORM的框架，MyBatis在查詢上因為是工程師手動寫SQL，所以靈活性較高。
+Spring Boot 中的 MyBatis設定   pom.</description>
+    </item>
+    
+    <item>
       <title>Spring學習筆記04-Bean</title>
       <link>https://jason11254.github.io/blog/springbean/</link>
       <pubDate>Mon, 08 Mar 2021 10:07:47 +0800</pubDate>
