@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="這篇文章為Git常用指令">
   <meta name="author" content="巫宗霖">
   <meta name="generator" content="Hugo 0.93.3" />
 
@@ -120,113 +120,99 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <div class="card-body px-0">
+      <div class="col-lg-8 mx-auto">
         
         <a href="/categories/%e7%ad%86%e8%a8%98"
-            class="text-primary">筆記</a>
+          class="text-primary">筆記</a>
         
-        <a href="https://jason11254.github.io/blog/restful/" class="h5 d-block my-3">RESTful設計風格</a>
+        <h2>Git常用指令</h2>
         <div class="mb-3 post-meta">
-            <span>By 巫宗霖</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2022-02-16</span>
-            
-        </div>
-        <p class="card-text">這篇文章為RESTful設計風格的筆記</p>
-        <a href="https://jason11254.github.io/blog/restful/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span>By 巫宗霖</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2022-03-20</span>
           
         </div>
-      </div>
-      
-      <div class="col-lg-4">
-  <div class="widgets">
-    
-    <div class="widget">
-      
-      <h4 class="widget-title">About Me</h4>
-      
-      <img src="https://jason11254.github.io/images/me.jpg" alt=""
-        class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-      
-      <p>我是巫宗霖，畢業於資訊工程科系。
-個性隨和，雙子座。
-目標是將所學應用到不同專案上，並持續吸收進步。
-這個網站將用作個人的筆記與紀錄。</p>
-      <a href="https://jason11254.github.io/about/" class="btn btn-outline-primary">Know More</a>
-      
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Category</h4>
-      <ul class="list-unstyled">
-        <li><a
-            href="/categories/%e7%ad%86%e8%a8%98/">筆記</a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Tag</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/aop/">Aop</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/git/">Git</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/http/">HTTP</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/ioc/">Ioc</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/java/">Java</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/mybatis/">Mybatis</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/restful/">Restful</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/spring/">Spring</a></li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Social</h4>
-      <ul class="list-inline social-links">
         
-        <li class="list-inline-item"><a href="https://www.facebook.com/jason11254/"><i class="ti-facebook"></i></a></li>
-        
-        <li class="list-inline-item"><a href="https://twitter.com/home?lang=zh-Hant"><i class="ti-twitter-alt"></i></a></li>
-        
-        <li class="list-inline-item"><a href="https://github.com/jason11254"><i class="ti-github"></i></a></li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
+        <div class="content mb-5">
+          <h1 id="常用git指令">常用Git指令</h1>
+<h4 id="1建立本地">1.建立本地</h4>
+<p>建立新的本地端 Repository。</p>
+<pre tabindex="0"><code>git init
+</code></pre><h4 id="2複製">2.複製</h4>
+<p>複製遠端的 Repository 檔案到本地端。</p>
+<pre tabindex="0"><code>git clone [Repository URL]
+</code></pre><h4 id="3檢查">3.檢查</h4>
+<p>檢查本地端檔案異動狀態。</p>
+<pre tabindex="0"><code>git status
+</code></pre><h4 id="4加入">4.加入</h4>
+<p>將指定的檔案/資料夾，加入版本控制。</p>
+<pre tabindex="0"><code>git add [檔案或資料夾]
+</code></pre><p>加入全部。</p>
+<pre tabindex="0"><code>git add .
+</code></pre><h4 id="5提交">5.提交</h4>
+<p>提交目前的異動。</p>
+<pre tabindex="0"><code>git commit
+</code></pre><p>提交目前的異動並設定摘要。</p>
+<pre tabindex="0"><code>git commit -m &#34;摘要&#34;
+</code></pre><h4 id="6紀錄">6.紀錄</h4>
+<p>查看 commit 記錄。</p>
+<pre tabindex="0"><code>git log
+</code></pre><h4 id="7push">7.Push</h4>
+<p>將本地 Repository 的目前 commit 發佈到遠端。</p>
+<pre tabindex="0"><code>git push
+</code></pre><h4 id="8分支">8.分支</h4>
+<p>建立分支</p>
+<pre tabindex="0"><code>git branch [name]
+</code></pre><p>查看分支</p>
+<pre tabindex="0"><code>git branch
+</code></pre><p>發佈至指定的分支。</p>
+<pre tabindex="0"><code>git push origin [branch]
+</code></pre><p>checkout指定的分支。</p>
+<pre tabindex="0"><code>git checkout [branch]
+</code></pre><p>建立並移至該分支。</p>
+<pre tabindex="0"><code>git checkout -b [name]
+</code></pre><p>強制刪除指定分支，需不在該分支。</p>
+<pre tabindex="0"><code>git branch -D [branch]
+</code></pre><p>修改分支名稱。</p>
+<pre tabindex="0"><code>git branch -m &lt;old name&gt; &lt;new name&gt;
+</code></pre><h4 id="9回到指定版本">9.回到指定版本</h4>
+<p>移動至指定的commit。(不會刪除中間的紀錄)</p>
+<pre tabindex="0"><code>git checkout [hash]
+</code></pre><pre tabindex="0"><code>git reset --soft [hash]
+</code></pre><p>強制恢復到指定的 commit。(會刪除中間的紀錄)</p>
+<pre tabindex="0"><code>git reset --hard [hash]
+</code></pre>
+        </div>
 
-      
-
-      
-      <div class="col-12 mt-5">
         
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jason11254" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
     </div>
   </div>
 </section>
-
 
 
 
